@@ -8,9 +8,11 @@
 <div id="diagram"></div>
 <script>
   var diagram = flowchart.parse("st=>start: PAI\n" +
-        "data1=>operation: Rekrutteringsalder\n Per pk||ettårig\n" +
+        "data1=>operation: Rekrutteringsalder\nPer pk, ettårig alder\n" +
+        "data2=>operation: Stillingsstørrelse år n\nPer pk, ettårig alder\n" +
         "e=>end: Sluttpunkt\n" +
-        "st->data1->e");
+        "st->data1->e\n" +
+        "st->data2->e\n"     );
   diagram.drawSVG('diagram');
  </script>
 </html> </body>

@@ -7,10 +7,10 @@
 
 <div id="diagram"></div>
 <script>
-  var diagram = flowchart.parse("st=>start: Startpunkt\n e=>end: Sluttpunkt\n st->e");
-  var diagram = flowchart.parse("st=>start: Startpunkt\n" +
+  var diagram = flowchart.parse("st=>start: PAI\n" +
+        "data1=>operation: Rekrutteringsalder\n" +
         "e=>end: Sluttpunkt\n" +
-        "st->e");
+        "st->data1->e");
   diagram.drawSVG('diagram');
  </script>
 </html> </body>

@@ -1,41 +1,17 @@
 <meta charset="UTF-8">
-
-<!-- <script type="text/javascript"
-        src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
-<script type="text/javascript"
-        src="//cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.6/flowchart.min.js"></script>
-<script type="text/javascript"
-        src="//cdnjs.cloudflare.com/ajax/libs/superagent/3.5.2/superagent.min.js"></script>
-<script type="text/javascript"
-        src="lib/chart.js"></script> -->
 <script src="raphael-min.js"></script>
 <script src="flowchart-latest.js"></script>
 <script src="jquery.js"></script>
 
-<html> 
-        <body>
-                <div id="chart">
-st=>start: Start|past:>http://www.google.com[blank]
-e=>end: End:>http://www.google.com
-op1=>operation: My Operation|past
-op2=>operation: Stuff|current
-sub1=>subroutine: My Subroutine|invalid
-cond=>condition: Yes
-or No?|approved:>http://www.google.com
-c2=>condition: Good idea|rejected
-io=>inputoutput: catch something...|request
-para=>parallel: parallel tasks
+<html> <body>
 
-st->op1(right)->cond
-cond(yes, right)->c2
-cond(no)->para
-c2(true)->io->e
-c2(false)->e
-
-para(path1, bottom)->sub1(left)->op1
-para(path2, right)->op2->e
-    </div>
+<div id="diagram"></div>
 <script>
-$('#chart').flowChart();
-</script>
+  var diagram = flowchart.parse("st=>start: Startpunkt\n e=>end: Sluttpunkt\n st->e");
+  var diagram = flowchart.parse("
+        st=>start: Startpunkt\n +
+        e=>end: Sluttpunkt\n +
+        st->e");
+  diagram.drawSVG('diagram');
+ </script>
 </html> </body>

@@ -10,12 +10,16 @@
         src="lib/chart.js"></script> -->
 <script src="raphael-min.js"></script>
 <script src="flowchart-latest.js"></script>
+<script src="jquery.js"></script>
 
 <html> <body>
 
 <div id="diagram"></div>
 <script>
-  var diagram = flowchart.parse("st=>start: Startpunkt\n e=>end: Sluttpunkt\n st->e");
+  var diagram = flowchart.parse("
+        st=>start: Startpunkt\n 
+        e=>end: Sluttpunkt\n 
+        st->e");
   diagram.drawSVG('diagram');
  </script>
 </html> </body>

@@ -8,9 +8,9 @@
 <div id="diagram"></div>
 <script>
   var diagram = flowchart.parse("st=>start: Startpunkt\n e=>end: Sluttpunkt\n st->e");
-  var diagram = flowchart.parse("st=>start: Startpunkt\n +
-        e=>end: Sluttpunkt\n +
-        st->e");
+  var diagram = flowchart.parse("st=>start: Startpunkt\n" +
+        "e=>end: Sluttpunkt\n" +
+        "st->e");
   diagram.drawSVG('diagram');
  </script>
 </html> </body>
